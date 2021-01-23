@@ -3,7 +3,7 @@ name: Build and deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   github-pages:
@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: wsmoses/action-jekyll-deploy@main
         with:
-          branch: 'master'
+          branch: 'gh-pages'
           token: ${{ secrets.GITHUB_TOKEN }}
