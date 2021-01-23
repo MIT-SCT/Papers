@@ -1,0 +1,16 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: wsmoses/action-jekyll-deploy@main
+        with:
+          branch: 'master'
+          token: ${{ secrets.GITHUB_TOKEN }}
