@@ -1,0 +1,33 @@
+title: William S. Moses
+email: web@wsmoses.com
+
+# the subpath of your site, e.g. /blog
+baseurl: ""
+
+# the base hostname & protocol for your site, e.g. http://example.com
+url: "http://wsmoses.com"
+
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  ./_plugins
+layouts_dir:  ./_layouts
+data_dir:     ./_data
+includes_dir: ./_includes
+# collections: null
+
+scholar:
+  bibliography_template: bib
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: _publications
+  bibliography: testing.bib
+
+# Plugins
+whitelist: []
+plugins:      ['jekyll/scholar']
+
+include: ['_pages']

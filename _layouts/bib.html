@@ -1,0 +1,29 @@
+---
+---
+{{ reference }}
+
+<div>
+  {% if entry.pdflink1 %}
+    <span><a href="{{ entry.pdflink1 }}">[pdf]</a></span>
+  {% endif %}
+</div>
+
+{% if fullinfo == empty or fullinfo == nil %}
+{% else %}
+
+{% if entry.award == empty or entry.award == nil %}
+{% else %}
+<h3>{{ entry.award }}</h3>
+<br/>
+{% endif %}
+
+Official
+
+{% if entry.abstract == empty or entry.abstract == nil %}
+{% else %}
+<p>{{ entry.abstract }}</p>
+{% endif %}
+
+<pre>{{ entry.bibtex }}</pre>
+
+{% endif %}
